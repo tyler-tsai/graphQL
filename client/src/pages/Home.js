@@ -22,7 +22,6 @@ const Home = () => {
           posts.data &&
           posts.data.map(post => (
             <Grid.Column key={post.id} style={{ marginBottom: 20 }}>
-              {console.log(post)}
               <PostCard post={post} />
             </Grid.Column>
           ))
