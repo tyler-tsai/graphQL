@@ -6,7 +6,6 @@ import { Button, Icon, Label } from "semantic-ui-react";
 const LikeButton = ({ user, post: { id, likeCount, likes } }) => {
   const [liked, setLiked] = useState(false);
   useEffect(() => {
-    console.log(likes, user);
     if (user && likes.find(like => like.username === user.username)) {
       setLiked(true);
     } else setLiked(false);
@@ -31,7 +30,6 @@ const LikeButton = ({ user, post: { id, likeCount, likes } }) => {
     </Button>
   );
 
-  console.log(liked, likes);
   return (
     <Button as="div" labelPosition="right" onClick={likePost}>
       {likeButton}
